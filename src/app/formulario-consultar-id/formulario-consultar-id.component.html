@@ -1,0 +1,37 @@
+<div class="container">
+  <h2>Consultar Equipo por ID</h2>
+  <form (ngSubmit)="consultarEquipo()">
+    <div class="form-group">
+      <label for="id">ID del Equipo:</label>
+      <input type="number" class="form-control" id="id" [(ngModel)]="id" name="id" required>
+      <button type="submit" class="btn btn-primary">Consultar</button>
+    </div>
+  </form>
+  <br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Estadio</th>
+        <th>Nacionalidad</th>
+        <th>Año de Fundación</th>
+        <th>Entrenador</th>
+        <th>Capacidad</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="equipo">
+        <td>{{ equipo.id }}</td>
+        <td>{{ equipo.nombre }}</td>
+        <td>{{ equipo.estadio }}</td>
+        <td>{{ equipo.nacionalidad }}</td>
+        <td>{{ equipo.fundacion }}</td>
+        <td>{{ equipo.entrenador }}</td>
+        <td>{{ equipo.capacidad }}</td>
+        <td>{{ equipo.valor }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

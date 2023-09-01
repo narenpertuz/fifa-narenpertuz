@@ -1,0 +1,26 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Estadio</th>
+      <th>Nacionalidad</th>
+      <th>Año de Fundación</th>
+      <th>Entrenador</th>
+      <th>Capacidad</th>
+      <th>Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let equipo of equipos.reverse()">
+      <td>{{ equipo.id }}</td>
+      <td>{{ equipo.nombre }}</td>
+      <td>{{ equipo.estadio }}</td>
+      <td>{{ equipo.nacionalidad }}</td>
+      <td>{{ equipo.fundacion }}</td>
+      <td>{{ equipo.entrenador }}</td>
+      <td>{{ equipo.capacidad }}</td>
+      <td>{{ equipo.valor }}</td>
+    </tr>
+  </tbody>
+</table>

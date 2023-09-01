@@ -1,0 +1,39 @@
+<div class="container">
+  <h2>Consultar Equipos por Fecha</h2>
+  <form (ngSubmit)="consultarEquiposPorFecha()">
+    <div class="form-group">
+      <label for="inicio">Fecha Inicio:</label>
+      <input type="date" class="form-control" id="inicio" [(ngModel)]="inicio" name="inicio" required>
+      <label for="fin">Fecha Final:</label>
+      <input type="date" class="form-control" id="fin" [(ngModel)]="fin" name="fin" required>
+      <button type="submit" class="btn btn-primary">Consultar</button>
+    </div>
+  </form>
+  <br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Estadio</th>
+        <th>Nacionalidad</th>
+        <th>Año de Fundación</th>
+        <th>Entrenador</th>
+        <th>Capacidad</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let equipo of equipo">
+        <td>{{ equipo.id }}</td>
+        <td>{{ equipo.nombre }}</td>
+        <td>{{ equipo.estadio }}</td>
+        <td>{{ equipo.nacionalidad }}</td>
+        <td>{{ equipo.fundacion }}</td>
+        <td>{{ equipo.entrenador }}</td>
+        <td>{{ equipo.capacidad }}</td>
+        <td>{{ equipo.valor }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
